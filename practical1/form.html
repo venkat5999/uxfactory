@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML FORMS</title>
+</head>
+
+<body>
+    <form name="login" action="form.html" method="POST">
+        <label for="firstname">FIRSTNAME</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname">LASTNAME</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+        <label for="password">password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label><br>
+        <input type="checkbox" id="language1" name="language1" value="english">
+        <label for="language1">I CAN SPEAK ENGLISH</label><br>
+        <input type="checkbox" id="language2" name="language2" value="telugu">
+        <label for="language2">I CAN SPEAK TELUGU</label><br>
+        <lable for="resume">upload resume:</lable>
+        <input type="file" id="resume" name="resume"><br><br>
+        <lable for="birthday">Birthday:</lable><br>
+        <input type="date" id="birthday" name="birthday"><br>
+        <lable for="favcolour">select your fav colour</lable>
+        <input type="color" id="favcolour" name="favcolour"><br>
+        <input type="submit" value="login">
+        <input type="reset"><br><br>
+
+        <!--form elements-->
+        <lable for="mobiles">choose a mobile:</lable>
+        <select id="mobiles" name="mobiles" size="4" multiple>
+            <option value="nokia">nokia</option>
+            <option value="apple">apple</option>
+            <option value="samsung">samsung</option>
+            <option value="oppo">oppo</option>
+            
+        </select><br><br>
+        <label for="mobile description">please enter mobile description</label>
+        <textarea id="mobile description" name="mobile description" rows="10" cols="50"></textarea>
+
+        <fieldset>
+            <legend>student info:</legend>
+            <label for="fname">firstname:</label>
+            <input type="text" id="fname" name="fname">
+            <label for="lname">lastname:</label>
+            <input type="text" id="lname" name="lname">
+            
+            
+        </fieldset><br><br>
+
+        <button type="button" oneclick="alert('hello world!')">
+            <img
+            style="height: 12px; width: 60px;"
+             src="../images/download.jpg" alt="download">
+       
+        </button>
+        <input list="mobile1"/>
+        <datalist id="mobile1">
+            <option value="nokia">
+            <option value="apple">
+            <option value="samsung">
+            <option value="realme">
+                        
+        </datalist>
+
+
+</form>
+</body>
+
+</html>
