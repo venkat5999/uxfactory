@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css combinators</title>
+        <style>
+            /* div p {
+                background-color: brown;
+            } */
+         /* div > p {
+                background-color:crimson;
+            } */
+         /* div + p {
+                background-color:darkblue; */
+            /* } */
+             div ~ p {
+                background-color:rgb(237, 100, 152);
+             }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS COMBINATORS</h1>
+        <div>
+            <p>paragraph1 is in div element</p>
+            <p>paragraph2 is in div element</p>
+            <p>paragraph3 is in div element</p>
+            <p>paragraph4 is in div element</p>
+            <p>paragraph5 is in div element</p>
+            <section><p>paragraph6 is in div element</p></section>
+        </div>
+        <p>paragraph7 is not in div element</p>
+        <p>paragraph8 is not in div element</p>
+    </body>
+</html>
