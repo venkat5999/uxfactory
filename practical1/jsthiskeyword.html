@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>javascript this keyword</title>
+    <script>
+        function myfn() {
+            alert("good morning");
+            console.log("this1",this);
+        }
+        setTimeout(function () {
+            myfn();
+        }, 5000);
+
+        var student = {
+            name:"surya",
+            batch:"may",
+            year:"2021",
+            studentdetails: function() {
+                return this.name + "is in" + this.batch +"batch";
+
+            }
+
+        }
+        var name = student.studentdetails();
+        console.log("name",name);
+    </script>
+</head>
+
+<body>
+    <input type="button" value="click">
+
+</body>
+
+</html>

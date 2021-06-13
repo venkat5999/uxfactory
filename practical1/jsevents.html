@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript events</title>
+
+    </head>
+    <body onload="event1()">
+        <p id="p1"></p>
+        <input type="button" value="click me" onclick="event1()"><!--onclick events-->
+        <input type="text" onfocus="event1()"><!--same on blur and onchange-->
+
+        <script>
+        function event1() {
+            document.getElementById("p1").innerHTML=Date();
+
+        }
+        </script>
+    </body>
+</html>

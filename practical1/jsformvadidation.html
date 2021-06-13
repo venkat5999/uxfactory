@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>javascript form vadidation</title>
+    <script>
+        function validateregform() {
+            var fname = document.forms["registrationform"]["firstname"].value;
+            var lname = document.forms["registrationform"]["lastname"].value;
+            var rank = document.forms["registrationform"]["rank"].value;
+            var email = document.forms["registrationform"]["email"].value;
+            var emailfilter = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            var password = document.forms["registrationform"]["password"].value;
+            var confirmpassword = document.forms["registrationform"]["cpassword"].value;
+            
+
+
+
+
+
+            if (fname == "") {
+                document.getElementById("fnameerror").style.display = "block";
+
+            } else {
+                document.getElementById("fnameerror").style.display = "none";
+            }
+
+
+            if (lname == "") {
+                document.getElementById("lnameerror").style.display = "block";
+            } else {
+                document.getElementById("lnameerror").style.display = "none";
+            }
+
+
+            if (rank == "") {
+                document.getElementById("rankerror").style.display = "block";
+            } else {
+                document.getElementById("rankerror").style.display = "none";
+            }
+
+
+            if (email == "") {
+                document.getElementById("emailerror").style.display = "block";
+            } else if (!emailfilter.test(email)) {
+                document.getElementById("emailerror").style.display = "block";
+
+
+            } else {
+                document.getElementById("emailerror").style.display = "none";
+            }
+
+
+            if (password == "") {
+                document.getElementById("passworderror").style.display = "block";
+            } else {
+                document.getElementById("passworderror").style.display = "none";
+            }
+
+            if (confirmpassword == "") {
+                document.getElementById("cpassworderror").style.display = "block";
+            } else {
+                document.getElementById("cpassworderror").style.display = "none";
+            }
+
+
+
+
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="registrationform" method="POST" onsubmit="return validateregform()">
+        <label>FIRSTNAME</label><br>
+        <input type="text" name="firstname" id="firstname"><br>
+        <span id="fnameerror" style="color: red; display:none">please enter firstname</span><br><br>
+
+
+        <label>LASTNAME</label><br>
+        <input type="text" name="lastname" id="lastname"><br>
+        <span id="lnameerror" style="color: red; display:none">please enter lastname</span><br><br>
+
+
+        <label>RANK:</label><br>
+        <input type="text" name="rank" id="rank"><br>
+        <span id="rankerror" style="color: red; display:none">please enter number between 1 and 50</span><br><br>
+
+        <label>EMAIL:</label><br>
+        <input type="text" name="email" id="email"><br>
+        <span id="emailerror" style="color: red; display:none">please enter valid email</span><br><br>
+
+        <label>PASSWORD</label><br>
+        <input type="password" name="password" id="password"><br>
+        <span id="passworderror" style="color: red; display:none">please enter password</span><br><br>
+
+        <label> CONFIRMPASSWORD</label><br>
+        <input type="password" name="cpassword" id="cpassword"><br>
+        <span id="cpassworderror" style="color: red; display:none">please enter password</span><br><br>
+
+
+
+
+        <input type="submit" value="submit">
+    </form>
+
+
+</body>
+
+</html>
